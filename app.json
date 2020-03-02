@@ -1,0 +1,26 @@
+{
+  "name": "simple-news-website",
+  "scripts": {
+    "postdeploy": "node scripts/build.prod.js"
+  },
+  "env": {
+    "REACT_APP_SHOW_HEADER": "true",
+    "REACT_APP_SHOW_NAVBAR": "true",
+    "REACT_APP_SHOW_CONTENT": "true",
+    "REACT_APP_GRAPHQL_HOST": "https://api.everbase.co",
+    "REACT_APP_GRAPHQL_QUERY_ROOT": "/graphql?apikey=alpha",
+    "NODE_MODULES_CACHE": "false",
+    "NPM_CONFIG_PRODUCTION": "true"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
