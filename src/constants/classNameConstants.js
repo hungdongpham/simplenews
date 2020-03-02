@@ -1,0 +1,11 @@
+export const DEFAULT_CLASS = 'default';
+export const ERROR_CLASS = 'error';
+export const SUCCESS_CLASS = 'success';
+export const DISABLED_CLASS = 'disabled';
+export const SMART_LABEL_CLASS = 'smart-label';
+export const VALIDATING_CLASS = 'validating';
+export const SMART_CLASS = 'smart';
+export const INLINE_CLASS = 'inline';
+export const VISIBILITY_ICON_CLASS = 'visibility-icon';
+export const SHOW_TOP_CLASS = 'show-top';
+export const SHOW_BOTTOM_CLASS = 'show-bottom';
