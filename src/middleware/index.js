@@ -5,6 +5,7 @@ import { ravenMiddleWare } from './sentry';
 import { fingerprinter } from './fingerprinter';
 import { news } from './news';
 import { headlineNews } from './headlineNews';
+import { userInfo } from './userInfo';
 
 const segmentTracker = createTracker();
 
@@ -16,7 +17,8 @@ const setupMiddleware = [
 // middleware acting on content; unsorted
 const contentMiddleware = [
   news,
-  headlineNews
+  headlineNews,
+  userInfo
 ];
 
 const middlewares = setupMiddleware.concat(contentMiddleware);

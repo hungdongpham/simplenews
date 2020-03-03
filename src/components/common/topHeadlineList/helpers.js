@@ -26,13 +26,6 @@ export const generateNewsRow = ( headlineNews ) => {
         <h2 className="title">{title}</h2>
       </div>
     </Link>
-    
-    {/* <div className="author">{getText('newsList.by')} {author} ({publishedDate})</div>
-    <div className="more">
-        <Link to={urlConstructor(urlMap.NEWS_DETAIL, { id: encodeTitle })}>
-            {getText('newsList.viewMore')}
-        </Link>
-    </div> */}
   </StyledNewsItem>);
 };
 

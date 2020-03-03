@@ -50,6 +50,43 @@ export const loadTopHeadlineNewsFailure = createAction(
   metaCreator
 );
 
+
+////// load user information //////
+export const loadUserInfoRequest = createAction(
+  types.LOAD_USER_INFO.REQUEST,
+  payloadCreator,
+  metaCreator
+);
+export const loadUserInfoSuccess = createAction(
+  types.LOAD_USER_INFO.SUCCESS,
+  payloadCreator,
+  metaCreator
+);
+export const loadUserInfoFailure = createAction(
+  types.LOAD_USER_INFO.FAILURE,
+  payloadCreator,
+  metaCreator
+);
+
+////// update user information //////
+export const updateUserInfoRequest = createAction(
+  types.UPDATE_USER_INFO.REQUEST,
+  payloadCreator,
+  metaCreator
+);
+export const updateUserInfoSuccess = createAction(
+  types.UPDATE_USER_INFO.SUCCESS,
+  payloadCreator,
+  metaCreator
+);
+export const updateUserInfoFailure = createAction(
+  types.UPDATE_USER_INFO.FAILURE,
+  payloadCreator,
+  metaCreator
+);
+
+
+
 //// toggle theme //////
 export const changeTheme = createAction(
   types.TOGGLE_THEME,

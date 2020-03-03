@@ -7,7 +7,6 @@ import { getIsLoading, getHeadlineNews } from 'selectors';
 import FullPageLoader from 'components/common/loaders/FullPageLoader';
 import { loadTopHeadlineNewsRequest } from 'actions';
 import { StyledHeadlineNewsListContainer } from './styledTopHeadlineList';
-import getText from 'context/language/getText';
 import { generateRowData } from './helpers';
 
 class TopHeadlineList extends Component {

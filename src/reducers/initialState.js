@@ -6,7 +6,8 @@ const initialState = {
   [key.THEME]: true,
   [key.LOADING]: {},
   [key.NEWS]: [],
-  [key.HEADLINE_NEWS]: []
+  [key.HEADLINE_NEWS]: [],
+  [key.USER_INFO]: {}
 };
 
 export default initialState;

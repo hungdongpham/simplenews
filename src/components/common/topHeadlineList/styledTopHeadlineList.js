@@ -31,7 +31,7 @@ export const StyledNewsItem = styled.div`
         bottom: 10px;
         padding: 15px;
         .title{
-            font-size: 12px;
+            font-size: 16px;
             color: ${({ theme }) => theme.colors.headlineNewsList.title};
         }
     }

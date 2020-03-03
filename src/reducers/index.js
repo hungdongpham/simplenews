@@ -5,6 +5,7 @@ import loading from './loadingReducer';
 import news from './newsReducer';
 import headlineNews from './headlineNewsReducer';
 import defaultTheme from './themeReducer';
+import userInfo from './userInfoReducer';
 
 // right now, we have no way to set themes, so no need to reduce them
 const rootReducer = history => combineReducers({
@@ -13,7 +14,8 @@ const rootReducer = history => combineReducers({
   loading,
   news,
   headlineNews,
-  defaultTheme
+  defaultTheme,
+  userInfo
 });
 
 export default rootReducer;

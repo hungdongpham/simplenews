@@ -13,6 +13,23 @@ const USEnglish = {
     signup: 'Sign up',
     login: 'Log in'
   },
+  userInfo:{
+    keyword: 'Keyword',
+    keywordPlaceHolder: 'Please select one keyword',
+    guestUserName: 'Guest',
+    guestAddress: 'Guest Address',
+    username: 'User Name',
+    userNamePlaceHolder: 'Please input user name...',
+    address: 'Address',
+    addressPlaceHolder: 'Please input user address...',
+    signupHeader: 'Register a new user'
+  },
+  keywordOptions:{
+    bitcoin: 'Bitcoin',
+    apple: 'Apple',
+    earthquake: 'Earth Quake',
+    animal: 'Animal'
+  },
   newsList:{
     header: 'Magazine & News',
     by: 'by',
@@ -41,6 +58,7 @@ const USEnglish = {
     delete: 'Delete',
     update: 'Update',
     back: 'Back',
+    submit: 'Submit',
     changeTheme: 'Change Theme'
   }
 };

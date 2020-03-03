@@ -26,6 +26,13 @@ export const getNews = createSelector(
   news => (news === undefined ? [] : news)
 );
 
+const pickUserInfo = state => state.userInfo;
+export const getUserInfo = createSelector(
+  [pickUserInfo],
+  userInfo => (userInfo === undefined ? {} : userInfo)
+);
+
+
 const pickHeadlineNews = state => state.headlineNews;
 export const getHeadlineNews = createSelector(
   [pickHeadlineNews],

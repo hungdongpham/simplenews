@@ -5,7 +5,7 @@ import isEmpty from 'lodash/isEmpty';
 import { SHOW_NEWS_FINGERPRINT } from 'constants/fingerprintConstants';
 import { getIsLoading, getNews, getHeadlineNews } from 'selectors';
 import FullPageLoader from 'components/common/loaders/FullPageLoader';
-import { loadNewsByKeyRequest, loadTopHeadlineNewsRequest  } from 'actions';
+import { loadNewsByKeyRequest, loadTopHeadlineNewsRequest } from 'actions';
 import { StyledNewsDetailContainer } from './styledNewsPage';
 import getText from 'context/language/getText';
 import { extractNewsIdFromUrl, checkTopHeadlinesUrl } from 'utilities/urlHelper';
@@ -16,12 +16,30 @@ class newsPage extends Component {
     componentDidMount() {
         const { loadNews, loadHeadlineNews, news, headlineNews } = this.props;
 
-        if(checkTopHeadlinesUrl()){
+        if (checkTopHeadlinesUrl()) {
             if (isEmpty(headlineNews)) loadHeadlineNews();
-        }else{
+        } else {
             if (isEmpty(news)) loadNews();
         }
 
+    }
+
+    handleNewsObject = (newsArray, newsId) => {
+        const selNews = newsArray.filter((newsObj) => newsObj.title === decodeURI(newsId));
+        const newsObj= selNews[0];
+        
+        if (isEmpty(newsObj)){
+            return { 
+                title: '',
+                author: '',
+                urlToImage: '',
+                description: '',
+                publishedAt: '',
+                content: '',
+                url: ''
+            };
+        } 
+        return newsObj;
     }
 
     render() {
@@ -32,20 +50,11 @@ class newsPage extends Component {
 
         if (isLoading) return <FullPageLoader />;
 
-        if(checkTopHeadlinesUrl()){
-            if (!isEmpty(headlineNews)) {
-                const selNews = headlineNews.filter((newsObj) => newsObj.title === decodeURI(newsId));
-                newsDetail = selNews[0];
-                originalLink = newsDetail.url;
-            }
-        }else{
-            if (!isEmpty(news)) {
-                const selNews = news.filter((newsObj) => newsObj.title === decodeURI(newsId));
-                newsDetail = selNews[0];
-                originalLink = newsDetail.url;
-            }
+        if (checkTopHeadlinesUrl()) {
+            if (!isEmpty(headlineNews)) newsDetail = this.handleNewsObject(headlineNews, newsId);
+        } else {
+            if (!isEmpty(news)) newsDetail = this.handleNewsObject(news, newsId);
         }
-
 
         return (
             <StyledNewsDetailContainer>
@@ -53,11 +62,11 @@ class newsPage extends Component {
                     {getText('newsList.back')}
                 </Link>
                 <h1 className="title">{newsDetail.title}</h1>
-                <div className="author">{getText('newsList.by')} {newsDetail.author} - {new Date(newsDetail.publishedAt).toLocaleDateString('en-US')}</div>
+                {newsDetail.author !== '' && (<div className="author">{getText('newsList.by')} {newsDetail.author} - {new Date(newsDetail.publishedAt).toLocaleDateString('en-US')}</div>)}
                 <img className="img" src={newsDetail.urlToImage} alt="" />
                 <div className="description">{newsDetail.description}</div>
                 <div className="content">{newsDetail.content}</div>
-                <a className="originalLink" href={originalLink}>{originalLink}</a>
+                <a className="originalLink" href={newsDetail.url}>{originalLink}</a>
             </StyledNewsDetailContainer>
         );
     }
