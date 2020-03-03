@@ -20,8 +20,22 @@ export const getTheme = createSelector(
   defaultTheme => (defaultTheme === undefined ? true : defaultTheme)
 );
 
-const pickLocations= state => state.locations;
-export const getLocations = createSelector(
-  [pickLocations],
-  locations => (locations === undefined ? [] : locations)
+const pickNews = state => state.news;
+export const getNews = createSelector(
+  [pickNews],
+  news => (news === undefined ? [] : news)
 );
+
+const pickUserInfo = state => state.userInfo;
+export const getUserInfo = createSelector(
+  [pickUserInfo],
+  userInfo => (userInfo === undefined ? {} : userInfo)
+);
+
+
+const pickHeadlineNews = state => state.headlineNews;
+export const getHeadlineNews = createSelector(
+  [pickHeadlineNews],
+  headlineNews => (headlineNews === undefined ? [] : headlineNews)
+);
+

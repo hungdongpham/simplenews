@@ -1,5 +1,5 @@
 import { LOAD_TOP_HEADLINE_NEWS } from 'actions/actionTypes';
-// import { getTopHeadlines } from 'api/newsApi';
+import { getTopHeadlines } from 'api/newsApi';
 import { 
     loadTopHeadlineNewsSuccess,
     loadTopHeadlineNewsFailure

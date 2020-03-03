@@ -1,5 +1,5 @@
 import { LOAD_ALL_NEWS_BY_KEY } from 'actions/actionTypes';
-// import { getEverythingByKey } from 'api/newsApi';
+import { getEverythingByKey } from 'api/newsApi';
 import { 
     loadNewsByKeySuccess, 
     loadNewsByKeyFailure

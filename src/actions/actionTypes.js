@@ -21,3 +21,7 @@ export const LOAD_ALL_NEWS_BY_KEY = new AsyncActionType('LOAD_ALL_NEWS_BY_KEY');
 // top headline news
 export const LOAD_TOP_HEADLINE_NEWS = new AsyncActionType('LOAD_TOP_HEADLINE_NEWS');
 export const TOGGLE_THEME = 'TOGGLE_THEME';
+
+// user information
+export const LOAD_USER_INFO = new AsyncActionType('LOAD_USER_INFO');
+export const UPDATE_USER_INFO = new AsyncActionType('UPDATE_USER_INFO');

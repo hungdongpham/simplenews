@@ -1,7 +1,10 @@
 const USEnglish = {
   home: {
-    header: 'This is a Demo Website (Simple auto complete).',
-    content: 'You can check it by access the link below',
+    header: 'This is a Demo Website (NEWS).',
+    content: 'You can check it by lists below',
+    topHealineNews: 'Top Headlines',
+    userPreferences: 'User Preferences',
+    profile: 'Profile'
   },
   navbar: {
     entertainment: 'Entertainment',
@@ -10,12 +13,33 @@ const USEnglish = {
     signup: 'Sign up',
     login: 'Log in'
   },
-  searchPage: {
-    title: 'Search Page',
-    placeHolder: 'Try Vietnam'
+  userInfo:{
+    keyword: 'Keyword',
+    keywordPlaceHolder: 'Please select one keyword',
+    guestUserName: 'Guest',
+    guestAddress: 'Guest Address',
+    username: 'User Name',
+    userNamePlaceHolder: 'Please input user name...',
+    address: 'Address',
+    addressPlaceHolder: 'Please input user address...',
+    signupHeader: 'Register a new user',
+    validationMessage: 'Plese make sure input all values.',
+    submitMessage: 'Your user was registered...'
+  },
+  keywordOptions:{
+    bitcoin: 'Bitcoin',
+    apple: 'Apple',
+    earthquake: 'Earth Quake',
+    animal: 'Animal'
+  },
+  newsList:{
+    header: 'Magazine & News',
+    by: 'by',
+    viewMore: 'More...',
+    back: 'back'
   },
   info:{
-    copyright: '© 2020 Airbnb, Inc. All rights reserved.'
+    copyright: '© 2020 All rights reserved.'
   },
   page404: {
     errorMsg: '404 ERROR',
@@ -36,6 +60,7 @@ const USEnglish = {
     delete: 'Delete',
     update: 'Update',
     back: 'Back',
+    submit: 'Submit',
     changeTheme: 'Change Theme'
   }
 };
