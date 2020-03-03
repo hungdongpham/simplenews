@@ -2,7 +2,7 @@ import React from 'react';
 import getText from 'context/language/getText';
 import { Alert, alertTypes } from 'components/common/alerts';
 import { StyledHomePageContainer } from './styledHomePage';
-
+import NewsList from 'components/common/newsList/newsList';
 
 const HomePage = () => {
 
@@ -13,6 +13,7 @@ const HomePage = () => {
         header={getText('home.header')}
         content={getText('home.content')}
       />
+      <NewsList />
     </StyledHomePageContainer>
   );
 };

@@ -56,22 +56,17 @@ const panel = {
   },
 };
 
-const searchBox = {
-  input:{
-    background: black,
-    background_focus: black,
-    font: white,
-    font_focus: white,
-    border: white,
-    border_focus: white,
-  },
-  results:{
-    background: grey,
-    background_focus: grey,
-    font: white,
-    border: white,
-    border_focus: white,
+const newsList = {
+  background: white,
+  background_item: white,
+  detail:{
+    background: white,
   }
+};
+
+const headlineNewsList = {
+  background: white,
+  background_item: white,
 };
 
 const customSwitch = {
@@ -94,6 +89,7 @@ export default {
   name,
   panel,
   button,
-  searchBox,
+  newsList,
+  headlineNewsList,
   customSwitch
 };

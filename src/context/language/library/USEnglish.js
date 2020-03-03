@@ -1,7 +1,7 @@
 const USEnglish = {
   home: {
-    header: 'This is a Demo Website (Simple auto complete).',
-    content: 'You can check it by access the link below',
+    header: 'This is a Demo Website (NEWS).',
+    content: 'You can check it by lists below',
   },
   navbar: {
     entertainment: 'Entertainment',
@@ -10,12 +10,14 @@ const USEnglish = {
     signup: 'Sign up',
     login: 'Log in'
   },
-  searchPage: {
-    title: 'Search Page',
-    placeHolder: 'Try Vietnam'
+  newsList:{
+    header: 'Magazine & News',
+    by: 'by',
+    viewMore: 'More...',
+    back: 'back'
   },
   info:{
-    copyright: '© 2020 Airbnb, Inc. All rights reserved.'
+    copyright: '© 2020 All rights reserved.'
   },
   page404: {
     errorMsg: '404 ERROR',

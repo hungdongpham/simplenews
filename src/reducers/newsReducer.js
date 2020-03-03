@@ -6,9 +6,8 @@ import * as storeConstants from '../store/constants';
 export default function (state = initialState[storeConstants.NEWS], action) {
   switch (action.type) {
     case LOAD_ALL_NEWS_BY_KEY.SUCCESS: {
-      const countries = get(action, 'payload.countries', []);
-      const locations = countries[0].cities;
-      return [...locations];
+      const news = get(action, 'payload.articles', []);
+      return [...news];
     }
     case LOAD_ALL_NEWS_BY_KEY.FAILURE: {
         return [];

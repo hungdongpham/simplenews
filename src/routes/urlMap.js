@@ -3,6 +3,7 @@ export const urlMap = {
   ENTERTAINMENT: '/entertainment',
   BUSINESS: '/busniness',
   TRAVEL: '/travel',
+  NEWS_DETAIL: '/news/:id/view',
   SIGN_UP: '/signup',
   LOG_IN: '/login'
 };

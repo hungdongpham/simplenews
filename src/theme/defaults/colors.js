@@ -14,6 +14,7 @@ const blue = '#003d6b';
 const white = '#ffffff';
 const brightgrey='#c8c9c7';
 const transparent = 'transparent';
+const lightblue ='#83b7cf7a';
 
 
 const name = {
@@ -56,22 +57,16 @@ const panel = {
   },
 };
 
-const searchBox = {
-  input:{
+const newsList = {
+  background: white,
+  background_item: lightblue,
+  detail:{
     background: white,
-    background_focus: lightgrey,
-    font: black,
-    font_focus: black,
-    border: lightgrey,
-    border_focus: darkgrey,
-  },
-  results:{
-    background: white,
-    background_focus: grey,
-    font: black,
-    border: lightgrey,
-    border_focus: darkgrey,
   }
+};
+
+const headlineNewsList = {
+  background: white,
 };
 
 const customSwitch = {
@@ -94,6 +89,7 @@ export default {
   name,
   panel,
   button,
-  searchBox,
+  newsList,
+  headlineNewsList,
   customSwitch
 };
