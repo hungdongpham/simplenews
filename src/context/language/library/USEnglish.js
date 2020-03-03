@@ -2,6 +2,9 @@ const USEnglish = {
   home: {
     header: 'This is a Demo Website (NEWS).',
     content: 'You can check it by lists below',
+    topHealineNews: 'Top Headlines',
+    userPreferences: 'User Preferences',
+    profile: 'Profile'
   },
   navbar: {
     entertainment: 'Entertainment',

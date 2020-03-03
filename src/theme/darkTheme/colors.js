@@ -66,7 +66,7 @@ const newsList = {
 
 const headlineNewsList = {
   background: white,
-  background_item: white,
+  title: white,
 };
 
 const customSwitch = {

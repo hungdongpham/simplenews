@@ -1,10 +1,10 @@
 import React from 'react';
 import getText from 'context/language/getText';
-import { StyledNewsItem} from './styledNewsList';
+import { StyledNewsItem} from './styledTopHeadlineList';
 import Link from 'components/common/links/Link';
 import { urlConstructor, urlMap } from 'routes/urlMap';
 
-export const generateNewsRow = ( news ) => {
+export const generateNewsRow = ( headlineNews ) => {
   const {
     source,
     author,
@@ -14,26 +14,31 @@ export const generateNewsRow = ( news ) => {
     urlToImage,
     publishedAt,
     content
-  } = news;
+  } = headlineNews;
 
   const publishedDate = new Date(publishedAt).toLocaleDateString('en-US');
   const encodeTitle = encodeURI(title);
 
   return (<StyledNewsItem>
-    <img className="img" src={urlToImage} alt="" />
-    <Link to={urlConstructor(urlMap.NEWS_DETAIL, { id: encodeTitle })}><h2 className="title">{title}</h2></Link>
-    <div className="author">{getText('newsList.by')} {author} ({publishedDate})</div>
+    <Link to={urlConstructor(urlMap.TOP_HEADLINES_DETAIL, { id: encodeTitle })}>
+      <img className="img" src={urlToImage} alt="" />
+      <div className="info">
+        <h2 className="title">{title}</h2>
+      </div>
+    </Link>
+    
+    {/* <div className="author">{getText('newsList.by')} {author} ({publishedDate})</div>
     <div className="more">
         <Link to={urlConstructor(urlMap.NEWS_DETAIL, { id: encodeTitle })}>
             {getText('newsList.viewMore')}
         </Link>
-    </div>
+    </div> */}
   </StyledNewsItem>);
 };
 
-export const generateRowData = (newsArray) => {
-  const rowData = newsArray.map(news => generateNewsRow(
-    news
+export const generateRowData = (headlineNewsArray) => {
+  const rowData = headlineNewsArray.map(headlineNews => generateNewsRow(
+    headlineNews
   ));
 
   return rowData;

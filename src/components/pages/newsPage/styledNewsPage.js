@@ -5,6 +5,8 @@ export const StyledNewsDetailContainer = styled.div`
     background-color: ${({ theme }) => theme.colors.newsList.detail.background};
     padding: 30px 30px 50px 30px;
     margin: 10px 5% 0px 5%;
+    box-shadow: 0px 0px 5px 0px ${({ theme }) => theme.colors.name.sectiongrey};
+    border-radius: 5px;
     .title{
         font-size: 26px;
         font-weight: bold;

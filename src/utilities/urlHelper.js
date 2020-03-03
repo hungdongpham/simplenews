@@ -20,3 +20,9 @@ export const extractNewsIdFromUrl = () => {
     const url = window.location.pathname;
     return getIdFromViewURL(url);
 }
+
+export const checkTopHeadlinesUrl = () => {
+    const url = window.location.pathname;
+    if(url.includes('/topheadlines')) return true;
+    return false;
+}

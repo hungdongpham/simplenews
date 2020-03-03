@@ -10,6 +10,7 @@ const PageController = () => (
   <Switch>
     <AuthRoute exact path={urlMap.HOME} component={Loadable.HomePage} />
     <AuthRoute path={urlMap.NEWS_DETAIL} component={NewsPage} />
+    <AuthRoute path={urlMap.TOPLINES_DETAIL} component={NewsPage} />
     <Route component={Page404} />
   </Switch>
 );

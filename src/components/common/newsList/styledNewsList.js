@@ -5,6 +5,8 @@ export const StyledNewsListContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     background-color: ${({ theme }) => theme.colors.newsList.background};
+    box-shadow: 0px 0px 5px 0px ${({ theme }) => theme.colors.name.sectiongrey};
+    border-radius: 5px;
 `;
 
 export const StyledNewsItem = styled.div`
@@ -16,8 +18,14 @@ export const StyledNewsItem = styled.div`
     .img{
         max-width: 100%;
     }
+    a, a.default_link{
+        text-decoration: none;
+    }
     .title{
+        padding: 10px 0px;
         font-size: 16px;
+        color: black;
+        text-decoration: none;
     }
     .description{
         font-size: 13px;
@@ -28,5 +36,6 @@ export const StyledNewsItem = styled.div`
     .more{
         font-size: 12px;
         float: right;
+        font-style: italic;
     }
 `;
