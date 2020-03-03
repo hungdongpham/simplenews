@@ -25,4 +25,8 @@ export const StyledRegisterPageContainer = styled.div`
     .select-ctr{
         width: 240px;
     }
+    .backLink{
+        display: block;
+        text-transform: capitalize;
+    }
 `;

@@ -22,7 +22,9 @@ const USEnglish = {
     userNamePlaceHolder: 'Please input user name...',
     address: 'Address',
     addressPlaceHolder: 'Please input user address...',
-    signupHeader: 'Register a new user'
+    signupHeader: 'Register a new user',
+    validationMessage: 'Plese make sure input all values.',
+    submitMessage: 'Your user was registered...'
   },
   keywordOptions:{
     bitcoin: 'Bitcoin',

@@ -10,6 +10,8 @@ import getText from 'context/language/getText';
 import { Input, Select } from 'semantic-ui-react'
 import { SELECTED_KEY, USERNAME, ADDRESS } from 'store/constants';
 import * as OPTIONS from 'constants/keywordConstants';
+import Link from 'components/common/links/Link';
+import { urlMap } from 'routes/urlMap';
 
 class RegisterPage extends Component {
     constructor(props) {
@@ -35,9 +37,16 @@ class RegisterPage extends Component {
 
     handleUpdateUserInfo = () => {
         const { updateUserInfo } = this.props;
+        const { userName, address, selectedKey } = this.state;
+
+        if( userName === '' || address === '' || selectedKey === ''){
+            alert(getText('userInfo.validationMessage'));
+            return false;
+        } 
 
         const values = Object.assign({}, this.state);
         updateUserInfo(values);
+        alert(getText('userInfo.submitMessage'));
     }
 
     render() {
@@ -54,6 +63,9 @@ class RegisterPage extends Component {
 
         return (
             <StyledRegisterPageContainer>
+                <Link className="backLink" to={urlMap.HOME}>
+                    {getText('newsList.back')}
+                </Link>
                 <h2>{getText('userInfo.signupHeader')}</h2>
                 <div className="cus-row">
                     <div className="title">{getText('userInfo.username')}:</div>  
