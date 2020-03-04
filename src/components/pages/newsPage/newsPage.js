@@ -66,7 +66,7 @@ class newsPage extends Component {
                 <img className="img" src={newsDetail.urlToImage} alt="" />
                 <div className="description">{newsDetail.description}</div>
                 <div className="content">{newsDetail.content}</div>
-                <a className="originalLink" href={newsDetail.url}>{originalLink}</a>
+                <a className="originalLink" href={newsDetail.url}>{newsDetail.url}</a>
             </StyledNewsDetailContainer>
         );
     }
